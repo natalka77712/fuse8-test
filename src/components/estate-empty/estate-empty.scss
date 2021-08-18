@@ -1,0 +1,24 @@
+.estate__status-wrapper {
+  margin-top: 25.4vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 62px;
+  text-align: center;
+  background-image: url('../../assets/ico-no-results.svg');
+  background-size: 45px 47px;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.estate__status {
+  font-size: 32px;
+  line-height: 1.1875;
+}
+
+.estate__status-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 45px;
+  font-size: 16px;
+  line-height: 1.5;
+}

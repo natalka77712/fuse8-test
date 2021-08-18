@@ -4,9 +4,9 @@ const initialState  = {
     homes: [],
 }
 
-export const courtReducer = (state = initialState, action) => {
+export const estateReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "SET-COURT":
+        case "SET-ESTATE":
             return { ...state, homes: action.payload}
         default:
             return state
@@ -14,13 +14,13 @@ export const courtReducer = (state = initialState, action) => {
 }
 
 // actions
-export const setCourtsAC = (courts) => ({ type: 'SET-COURT', payload: courts })
+export const setEstateAC = (estate) => ({ type: 'SET-ESTATE', payload: estate })
 
 //thunks
-export const fetchCourtTC = () => (dispatch) => {
-    developmentsApi.getCourts()
+export const fetchEstateTC = () => (dispatch) => {
+    developmentsApi.getEstate()
         .then((res)=>{
-            dispatch(setCourtsAC(res.data))
+            dispatch(setEstateAC(res.data))
         })
         .catch((error) =>{
             console.log('some error occured')

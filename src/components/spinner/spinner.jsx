@@ -2,7 +2,7 @@ import React from 'react';
 import './spinner.scss';
 
 
-function Spinner() {
+const Spinner = () => {
     return (
         <div className="spinner" style={{margin: '25% 50%'}}>
             <div className="spinner-circle spinner-circle-outer"></div>

@@ -1,0 +1,43 @@
+@import "./src/common/styles/mixins";
+@import "./src/common/styles/variables";
+
+.search-input {
+  margin-bottom: 45px;
+  @include flex(row, flex-start, center, nowrap);
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+  }
+}
+
+.search-input__label {
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.search-input__in {
+  margin-left: 20px;
+  padding: 0 15px;
+  display: block;
+  flex-grow: 1;
+  max-width: 418px;
+  height: 50px;
+  background: white;
+  border: 1px solid $borderColor;
+  border-radius: 25px;
+  outline: none;
+  &:-webkit-autofill {
+    border: 1px solid $borderColor;
+    -webkit-text-fill-color: $textColor;
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+    &:focus {
+      border: 1px solid $borderColor;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 318px;
+  }
+}

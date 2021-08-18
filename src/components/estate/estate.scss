@@ -1,0 +1,74 @@
+@import '../fuse8-test/src/common/styles/variables';
+@import '../fuse8-test/src/common/styles/mixins';
+
+.estate-card {
+  padding-bottom: 15px;
+}
+
+.estate-card__wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60%;
+
+  & img {
+    width: 100%;
+    @include bgSettings();
+    object-fit: cover;
+  }
+}
+
+.estate-card__type {
+  margin: 0;
+  padding: 8px 10px 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 700;
+  color: white;
+
+  &--independentliving {
+    background-color: $green;
+  }
+
+  &--supportavailable {
+    background-color: $orange;
+  }
+}
+
+.estate-card__info {
+  padding: 20px 0 0 20px;
+  text-align: left;
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 10px 0 10px;
+  }
+
+  & p, h3 {
+    margin: 0;
+  }
+
+  .estate-card__title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+
+  & span {
+    font-weight: 700;
+    margin-left: 5px;
+  }
+
+  .estate-card__price {
+    margin-top: 10px;
+  }
+
+  .estate-card__available {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
